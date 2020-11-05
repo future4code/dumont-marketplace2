@@ -12,7 +12,8 @@ const myTheme = createMuiTheme ({
     secondary: { 
       main: "#E0E0E0"
     }
-  }
+  },
+  spacing: 20,
 })
 
 const LogoContainer = styled.div`
@@ -23,7 +24,9 @@ const LogoContainer = styled.div`
 
 const ButtonContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  margin-left: 39vw;
+  margin-right: 39vw;
 `
 
 
@@ -41,7 +44,9 @@ export class AppContainer extends Component {
           <Button variant = "contained" color = "primary"> 
             Comprar 
           </Button>
-          <Button variant = "contained" color = "primary"> Vender </Button>
+          <Button variant = "contained" color = "primary">
+            Vender 
+          </Button>
         </ButtonContainer>
 
       </MuiThemeProvider>
