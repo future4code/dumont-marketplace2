@@ -1,10 +1,22 @@
-import React from 'react'
-import { AppContainer } from './components/AppContainer'
+import React from "react";
+import Product from "./components/Product";
+import Filter from "./components/Filter"
+import Header from "./components/Header"
+import { AppContainer, NewContainer} from "./components/Styled"
 
-function App() {
+export default class App extends React.Component {
+  render() {
+	  const PageProduct = <Product/>
+	  const NavFilter = <Filter/>
+	  const MenuNav = <Header />
 	return (
-        <AppContainer />
+		<AppContainer>
+			{MenuNav}
+			<NewContainer>
+			{NavFilter}
+			{PageProduct}
+			</NewContainer>
+		</AppContainer>
 	)
+  }
 }
-
-export default App
