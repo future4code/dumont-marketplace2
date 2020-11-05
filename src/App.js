@@ -1,10 +1,17 @@
-import React from 'react'
-import { AppContainer } from './components/AppContainer'
+import React from "react";
+import "./styles.css";
+import SalesPage from "./components/SalesPage"
 
-function App() {
-	return (
-        <AppContainer />
-	)
-}
 
-export default App
+
+class App extends React.Component {
+  render() {
+    return (
+       <div className="App">
+           <SalesPage />
+
+         </div>
+       );
+    }
+ }
+export default App;
