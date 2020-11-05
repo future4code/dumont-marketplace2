@@ -3,7 +3,6 @@ import React from "react";
 import Product from "./components/Product";
 import Filter from "./components/Filter"
 import Header from "./components/Header"
-import LogoFutureCar from "./img/futurecar-min.JPG"
 import { AppContainer, NewContainer} from "./components/Styled"
 
 export default class App extends React.Component {

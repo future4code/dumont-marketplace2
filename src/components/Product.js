@@ -1,7 +1,6 @@
 import React from "react";
 import { ProdutosContainer, ProdutosGrid, ProdutosHeader } from "./Styled";
 import ProductCard from "./ProductCard";
-import CardProdutos from "./ProductCard";
 
 export default class Product extends React.Component {
   render() {
@@ -12,8 +11,9 @@ export default class Product extends React.Component {
           <label>
             Ordenação:
             <select>
-              <option>Crescente</option>
-              <option>Decrescente</option>
+              <option>Valor</option>
+              <option>Marca</option>
+              <option>Mais Relevantes</option>
             </select>
           </label>
         </ProdutosHeader>
