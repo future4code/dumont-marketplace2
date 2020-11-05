@@ -1,7 +1,7 @@
 import React from "react";
 import { CardContainer, CardInfo } from "./Styled"
 
-export default class ProdutsCard extends React.Component {
+export default class ProductsCard extends React.Component {
   render() {
     return(
         <CardContainer>

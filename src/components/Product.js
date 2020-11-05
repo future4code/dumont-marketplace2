@@ -1,12 +1,12 @@
 import React from "react";
-import { ProdutsContainer, ProdutsGrid, ProdutsHeader } from "./Styled";
+import { ProductsContainer, ProductsGrid, ProductsHeader } from "./Styled";
 import ProductCard from "./ProductCard";
 
 export default class Product extends React.Component {
   render() {
     return (
-      <ProdutsContainer>
-        <ProdutsHeader>
+      <ProductsContainer>
+        <ProductsHeader>
           <p> Quantidade de Produtos: </p>
           <label>
             Ordenação:
@@ -16,8 +16,8 @@ export default class Product extends React.Component {
               <option>Mais Relevantes</option>
             </select>
           </label>
-        </ProdutsHeader>
-        <ProdutsGrid>
+        </ProductsHeader>
+        <ProductsGrid>
            <ProductCard />
            <ProductCard />
            <ProductCard />
@@ -28,8 +28,8 @@ export default class Product extends React.Component {
            <ProductCard />
            <ProductCard />
            <ProductCard />
-        </ProdutsGrid>
-      </ProdutsContainer>
+        </ProductsGrid>
+      </ProductsContainer>
     );
   }
 }
