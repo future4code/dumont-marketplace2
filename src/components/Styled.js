@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 export const AppContainer = styled.div`
@@ -40,7 +39,7 @@ export const ProdutosGrid = styled.div`
 export const FilterContainer = styled.div`
   display: flex;
   flex-direction: column;
-  border: 1px solid;
+  border: 2px solid #e0e0e0;
   border-radius: 10px;
   padding: 10px;
   height: 100%;
@@ -81,7 +80,9 @@ export const SelectFilter = styled.select`
 `
 
 export const CardContainer = styled.div`
-  border: 1px solid black;
+  border: 2px solid #e0e0e0;
+  padding: 4px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
 `;
