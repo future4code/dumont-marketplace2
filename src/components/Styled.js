@@ -14,7 +14,7 @@ export const MenuContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const ProdutosContainer = styled.div`
+export const ProdutsContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -22,14 +22,14 @@ export const ProdutosContainer = styled.div`
   margin-top: 10px;
 `;
 
-export const ProdutosHeader = styled.div`
+export const ProdutsHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 16px;
 `;
 
-export const ProdutosGrid = styled.div`
+export const ProdutsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
