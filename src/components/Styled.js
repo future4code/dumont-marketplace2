@@ -62,6 +62,7 @@ export const LabelContainer = styled.label`
   flex-direction: row;
   align-items: flex-start;
   margin-bottom: 8px;
+  margin-top: 8px;
 `;
 
 export const InputContainer = styled.input`

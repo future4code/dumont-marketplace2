@@ -7,6 +7,15 @@ export default class Filter extends React.Component {
             <FilterContainer>
             <p>Filtros</p>
             <div>
+                <select>
+                    <option>Carros Populares</option>
+                    <option>Carros Esportivos</option>
+                    <option>Pickup</option>
+                    <option>Super Luxo</option>
+                    <option>Micro Van</option>
+                </select>
+            </div>
+            <div>
                     <LabelContainer>Valor mínimo:</LabelContainer>
                     <InputContainer 
                     type="number" 
