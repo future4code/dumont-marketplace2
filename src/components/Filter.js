@@ -1,5 +1,5 @@
 import React from 'react';
-import { FilterContainer, InputContainer } from "./Styled"
+import { FilterContainer, InputContainer, LabelContainer } from "./Styled"
 
 export default class Filter extends React.Component {
     render() {
@@ -7,20 +7,20 @@ export default class Filter extends React.Component {
             <FilterContainer>
             <p>Filtros</p>
             <div>
-                    <InputContainer>Valor mínimo:</InputContainer>
-                    <input 
+                    <LabelContainer>Valor mínimo:</LabelContainer>
+                    <InputContainer 
                     type="number" 
                     />
                 </div>
                 <div>
-                    <InputContainer>Valor máximo:</InputContainer>
-                    <input 
+                    <LabelContainer>Valor máximo:</LabelContainer>
+                    <InputContainer 
                     type="number"
                     />
                 </div>
                 <div>
-                    <InputContainer>Buscar produto:</InputContainer>
-                    <input 
+                    <LabelContainer>Buscar produto:</LabelContainer>
+                    <InputContainer 
                     type="text" 
                     />
                 </div>
