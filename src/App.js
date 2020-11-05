@@ -1,10 +1,21 @@
-import React from 'react'
-import { AppContainer } from './components/AppContainer'
+import { render } from "@testing-library/react";
+import React from "react";
+import Product from "./components/Product";
+import Filter from "./components/Filter"
+import Header from "./components/Header"
+import { AppContainer } from "./components/Styled"
 
-function App() {
+export default class App extends React.Component {
+  render() {
+	  const PageProduct = <Product/>
+	  const NavBar = <Header/>
+	  const NavFilter = <Filter/>
 	return (
-        <AppContainer />
+		<AppContainer>
+			{NavBar}
+			{PageProduct}
+			{NavFilter}
+		</AppContainer>
 	)
+  }
 }
-
-export default App
