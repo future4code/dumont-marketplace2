@@ -4,22 +4,22 @@ import Button from '@material-ui/core/Button';
 import {createMuiTheme, MuiThemeProvider} from '@material-ui/core';
 import styled from 'styled-components';
 
-const myTheme = createMuiTheme ({
-  pallete: {
-    primary: { 
+const myTheme = createMuiTheme({
+  palette: {
+    primary: {
       main: "#FF5C5C"
     },
-    secondary: { 
-      main: "#E0E0E0"
+    secondary: {
+      main: "#FF00FF"
     }
-  },
-  spacing: 20,
-})
+  }
+});
 
 const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 20px;
 `
 
 const ButtonContainer = styled.div`
@@ -33,6 +33,7 @@ const ButtonContainer = styled.div`
 export class AppContainer extends Component {
   render() {
     return (
+
       <MuiThemeProvider theme = {myTheme}> 
 
         <LogoContainer>
