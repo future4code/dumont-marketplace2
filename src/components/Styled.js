@@ -7,20 +7,17 @@ export const AppContainer = styled.div`
 `;
 
 export const NewContainer = styled.div`
-  display:flex;
-`
+  display: flex;
+`;
 
 export const MenuContainer = styled.div`
-  border: 1px solid;
-  display:flex;
+  display: flex;
   justify-content: space-between;
 `;
 
 export const ProdutosContainer = styled.div`
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
-  max-width: 85%;
   min-height: 100%;
   margin-left: 10px;
   margin-top: 10px;
@@ -35,18 +32,18 @@ export const ProdutosHeader = styled.div`
 
 export const ProdutosGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
   padding: 16px;
 `;
 
 export const FilterContainer = styled.div`
-  border: 1px solid black;
+  border: 1px solid;
   padding: 8px;
   width: 15%;
   height: 100%;
   margin-left: 3px;
-  margin-top: 10px;
+  margin-top: 30px;
 `;
 
 export const LoginButton = styled.button`
@@ -67,4 +64,20 @@ export const LabelContainer = styled.label`
 
 export const InputContainer = styled.input`
   width: 60px;
+`;
+
+export const CardContainer = styled.div`
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const CardInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  margin-top: 5px;
+  p {
+    margin: 5px 0;
+  }
 `;
