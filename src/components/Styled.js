@@ -39,11 +39,9 @@ export const ProdutosGrid = styled.div`
 
 export const FilterContainer = styled.div`
   border: 1px solid;
-  padding: 8px;
-  width: 15%;
+  padding: 5px;
   height: 100%;
-  margin-left: 3px;
-  margin-top: 30px;
+  margin: 20px 20px 20px 20px;
 `;
 
 export const LoginButton = styled.button`
@@ -63,7 +61,7 @@ export const LabelContainer = styled.label`
 `;
 
 export const InputContainer = styled.input`
-  width: 60px;
+  width: 100px;
 `;
 
 export const CardContainer = styled.div`

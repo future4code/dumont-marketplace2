@@ -5,8 +5,9 @@ export default class Filter extends React.Component {
     render() {
         return(
             <FilterContainer>
-            <p>Filtros</p>
             <div>
+                <h4>Filtro</h4>
+                <p>Categorias</p>
                 <select>
                     <option>Carros Populares</option>
                     <option>Carros Esportivos</option>
