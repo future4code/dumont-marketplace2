@@ -1,15 +1,16 @@
 import React from "react";
-import { MenuContainer } from "./Styled"
+import { MenuContainer, LoginButton } from "./Styled"
+import LogoFutureCar from "../img/futurecar-min.JPG"
 
 export default class Header extends React.Component {
     render() {
         return(
            <MenuContainer>
                <div>
-                   <h1>Logo</h1>
+                   <img src={ LogoFutureCar } alt="Logo Future Car" width="280px" height="80px"/>
                </div>
                <div>
-                   <h3>Menu</h3>
+                   <LoginButton>Login</LoginButton>
                </div> 
            </MenuContainer> 
         )
