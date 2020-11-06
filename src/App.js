@@ -1,17 +1,25 @@
 import React from "react";
-import "./styles.css";
+import Product from "./components/Product";
+import Filter from "./components/Filter"
+import Header from "./components/Header"
+import { AppContainer, NewContainer} from "./components/Styled"
 import SalesPage from "./components/SalesPage"
 
-
-
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
-    return (
-       <div className="App">
-           <SalesPage />
+	  const PageProduct = <Product/>
+	  const NavFilter = <Filter/>
+	  const MenuNav = <Header />
+	return (
+		<AppContainer>
+			{MenuNav}
+			<NewContainer>
+			{NavFilter}
+			{PageProduct}
+			</NewContainer>
+		</AppContainer>
+   // <SalesPage />
 
-         </div>
-       );
-    }
- }
-export default App;
+	)
+  }
+}
