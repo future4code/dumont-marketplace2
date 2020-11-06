@@ -3,6 +3,7 @@ import Product from "./components/Product";
 import Filter from "./components/Filter"
 import Header from "./components/Header"
 import { AppContainer, NewContainer} from "./components/Styled"
+import SalesPage from "./components/SalesPage"
 
 export default class App extends React.Component {
   render() {
@@ -17,6 +18,8 @@ export default class App extends React.Component {
 			{PageProduct}
 			</NewContainer>
 		</AppContainer>
+   // <SalesPage />
+
 	)
   }
 }
