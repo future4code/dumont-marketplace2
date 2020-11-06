@@ -1,6 +1,13 @@
 import React from "react";
 import { CardContainer, CardInfo, CursedDiv, SaleButton} from "./Styled"
 import axios from "axios";
+import styled from 'styled-components'
+
+const ImgContainer = styled.img`
+  width: 256px;
+  height: 144px;
+  align-self: center;
+`
 
 export default class ProductsCard extends React.Component {
   state = {
@@ -12,7 +19,7 @@ componentDidMount = () =>{
 }
 
 getAllCars = () => {
-    axios.get("https://us-central1-labenu-apis.cloudfunctions.net/futureCarTwo/cars")
+    axios.get("https://us-central1-labenu-apis.cloudfunctions.net/futureCarOne/cars")
     .then((response) => {
         this.setState({carsArray : response.data.cars})
     })
@@ -24,9 +31,9 @@ getAllCars = () => {
       const renderCarsCards = this.state.carsArray.map((carCard) => {
       return(
           <CardContainer key={carCard.id}>
-                <img src="https://picsum.photos/200/150" alt= "imagem de carro aleatoria"/>
+                <ImgContainer src={carCard.url} alt= "imagem de carro aleatoria"/>
             <CardInfo key={carCard.id}>
-                <p>{carCard.name}</p>
+                <h5>{carCard.name}</h5>
                 <p>R${carCard.price},00 </p>
                 <p>{carCard.description}</p>
                 <p>{carCard.paymentMethod}</p>
