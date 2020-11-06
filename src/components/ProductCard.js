@@ -16,7 +16,6 @@ getAllCars = () => {
     axios.get("https://us-central1-labenu-apis.cloudfunctions.net/futureCarTwo/cars")
     .then((response) => {
         this.setState({carsArray : response.data.cars})
-        console.log("tee", response.data.cars)
     })
     .catch((error) => {
         console.log(error.message)
