@@ -17,7 +17,6 @@ export const MenuContainer = styled.div`
 export const ProductsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   margin-left: 10px;
   margin-top: 10px;
 `;
@@ -32,8 +31,7 @@ export const ProductsHeader = styled.div`
 export const ProductsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-  padding: 16px;
+  grid-template-rows: 200px 200px 200px;
 `;
 
 export const FilterContainer = styled.div`
@@ -98,13 +96,31 @@ export const CardInfo = styled.div`
 `;
 
 export const FilterButton = styled.button`
-border-radius: 5px;
-border: 2px solid #ff5c5c;
-background-color: white;
-margin: 30px;
-padding: 2px;
-width: 120px;
-&:hover{
-    background-color: #ff5c5c
-}
+  border-radius: 5px;
+  border: 2px solid #ff5c5c;
+  background-color: white;
+  margin: 30px;
+  padding: 2px;
+  width: 120px;
+  &:hover{
+      background-color: #ff5c5c
+  }
 `;
+
+export const SaleButton = styled.button `
+  border-radius: 5px;
+  border: 2px solid #ff5c5c;
+  background-color: white;
+  margin-top: 20px;
+  &:hover{
+      background-color: #ff5c5c
+  }
+` 
+
+export const CursedDiv = styled.div `
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: 410px 410px 410px 410px;
+  gap: 10px;
+  padding: 10px;
+` 
