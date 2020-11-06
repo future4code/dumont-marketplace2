@@ -16,7 +16,11 @@ export default class Filter extends React.Component {
         </SelectFilter>
         <div>
           <LabelContainer>Valor mínimo:</LabelContainer>
-          <InputContainer type="number" />
+          <InputContainer 
+            type = "number" 
+            value = {this.props.minFilter}
+            onchange = {}
+          />
         </div>
         <div>
           <LabelContainer>Valor máximo:</LabelContainer>

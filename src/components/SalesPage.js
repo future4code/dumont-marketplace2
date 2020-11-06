@@ -25,9 +25,11 @@ class SalesPage extends React.Component {
     state = {
         name: "",
         description: "",
-        price: null,
+        price: "",
         paymentMethod: "",
-        shipping: null 
+        shipping: "",
+        url: ""
+
     }
 
     onChangeName= (event) => {
@@ -50,6 +52,10 @@ class SalesPage extends React.Component {
         this.setState({shipping: event.target.value})
     }
 
+    onChangeURL= (event) => {
+        this.setState({url: event.target.value})
+    }
+
 
     handleCreateAd = () => {
         const body = {
@@ -57,7 +63,8 @@ class SalesPage extends React.Component {
           description: this.state.description,
           price: this.state.price,
           paymentMethod: this.state.paymentMethod,
-          shipping: this.state.shipping
+          shipping: this.state.shipping,
+          url: this.state.url
         };
     
         axios.post(
@@ -65,7 +72,7 @@ class SalesPage extends React.Component {
             body,
           )
           .then((response) => {
-            this.setState({ name: "", description: "", price: "", paymentMethod:"", shipping: "" });
+            this.setState({ name: "", description: "", price: "", paymentMethod:"", shipping: "", url: "" });
             alert("Anúncio criado com sucesso!");
             console.log(response)
           })
@@ -122,6 +129,12 @@ class SalesPage extends React.Component {
                     placeholder = {"Prazo de Entrega"}
                     value = { this.state.shipping}
                     onChange = {this.onChangeShipping}>
+                </InputSale>
+
+                <InputSale 
+                    placeholder = {"URL Foto do Carro"}
+                    value = { this.state.url}
+                    onChange = {this.onChangeURL}>
                 </InputSale>
                 </div>
 
