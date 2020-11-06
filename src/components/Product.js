@@ -19,15 +19,6 @@ export default class Product extends React.Component {
         </ProductsHeader>
         <ProductsGrid>
            <ProductCard />
-           <ProductCard />
-           <ProductCard />
-           <ProductCard />
-           <ProductCard />
-           <ProductCard />
-           <ProductCard />
-           <ProductCard />
-           <ProductCard />
-           <ProductCard />
         </ProductsGrid>
       </ProductsContainer>
     );
