@@ -2,7 +2,6 @@ import React from "react";
 import { CardContainer, CardInfo } from "./Styled"
 import axios from "axios"
 
-
 export default class ProductsCard extends React.Component {
   state = {
     carsArray: []
@@ -44,3 +43,7 @@ getAllCars = () => {
     )
   }
 }
+
+
+
+
