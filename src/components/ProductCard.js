@@ -1,6 +1,6 @@
 import React from "react";
-import { CardContainer, CardInfo } from "./Styled"
-import axios from "axios"
+import { CardContainer, CardInfo, CursedDiv, SaleButton} from "./Styled"
+import axios from "axios";
 
 export default class ProductsCard extends React.Component {
   state = {
@@ -23,23 +23,23 @@ getAllCars = () => {
     render() {
       const renderCarsCards = this.state.carsArray.map((carCard) => {
       return(
-          <CardContainer>
+          <CardContainer key={carCard.id}>
                 <img src="https://picsum.photos/200/150" alt= "imagem de carro aleatoria"/>
-            <CardInfo key={CharacterData.id}>
+            <CardInfo key={carCard.id}>
                 <p>{carCard.name}</p>
                 <p>R${carCard.price},00 </p>
                 <p>{carCard.description}</p>
                 <p>{carCard.paymentMethod}</p>
                 <p>{carCard.shipping} dias úteis</p>
-                <button>Falar com o vendedor</button>
+                <SaleButton>Falar com o vendedor</SaleButton>
             </CardInfo>
           </CardContainer>
       )
     })
     return(
-      <div>
+      <CursedDiv>
         {renderCarsCards}
-      </div>
+      </CursedDiv>
     )
   }
 }
