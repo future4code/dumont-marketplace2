@@ -17,18 +17,20 @@ export default class Filter extends React.Component {
         <div>
           <LabelContainer>Valor mínimo:</LabelContainer>
           <InputContainer 
-            type = "number" 
-            value = {this.props.minFilter}
-            onchange = {}
-          />
         </div>
         <div>
           <LabelContainer>Valor máximo:</LabelContainer>
-          <InputContainer type="number" />
+          <InputContainer 
+          type="number" 
+          value={this.props.maxFilter}
+          onChange={this.props.onChangeMaxFilter}/>
         </div>
         <div>
           <LabelContainer>Buscar produto:</LabelContainer>
-          <InputContainer type="text" />
+          <InputContainer 
+          type="text"
+          value={this.props.searchFilter}
+          onChange={this.props.onChangeSearchFilter} />
         </div>
         <FilterButton>Limpar Filtros</FilterButton>
       </FilterContainer>
