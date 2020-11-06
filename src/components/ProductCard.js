@@ -1,45 +1,47 @@
-import React from 'react'
-import axios from 'axios'
-import { render } from '@testing-library/react'
+import React from "react";
+import { CardContainer, CardInfo } from "./Styled"
+import axios from "axios"
 
 
-class ProductCard extends React.Component {
-    state = {
-        carsArray: []
-    }
-
-    componentDidMount = () =>{
-        this.getAllCars();
-    }
-
-    getAllCars = () => {
-        axios.get("https://us-central1-labenu-apis.cloudfunctions.net/futureCarTwo/cars")
-        .then((response) => {
-            this.setState({carsArray : response.data.cars})
-            console.log("teste", response.data.cars)
-        })
-        .catch((error) => {
-            console.log(error.message)
-        })
-    }
-    render(){
-        const renderCarsCards = this.state.carsArray.map((carCard) => {
-            return(
-                <div key={carCard.id}>
-                    {carCard.name}
-                    {carCard.description}
-                    R${carCard.price},00
-                    {carCard.paymentMethod}
-                    {carCard.shipping}: dias úteis
-                </div>
-            )
-        })
-        return(
-            <div>
-                {renderCarsCards}
-            </div>
-        )
-    }
+export default class ProductsCard extends React.Component {
+  state = {
+    carsArray: []
 }
 
-export default ProductCard
+componentDidMount = () =>{
+    this.getAllCars();
+}
+
+getAllCars = () => {
+    axios.get("https://us-central1-labenu-apis.cloudfunctions.net/futureCarTwo/cars")
+    .then((response) => {
+        this.setState({carsArray : response.data.cars})
+        console.log("teste", response.data.cars)
+    })
+    .catch((error) => {
+        console.log(error.message)
+    })
+}
+    render() {
+      const renderCarsCards = this.state.carsArray.map((carCard) => {
+      return(
+          <CardContainer>
+                <img src="https://picsum.photos/200/150" alt= "imagem de carro aleatoria"/>
+            <CardInfo key={CharacterData.id}>
+                <p>{carCard.name}</p>
+                <p>R${carCard.price},00 </p>
+                <p>{carCard.description}</p>
+                <p>{carCard.paymentMethod}</p>
+                <p>{carCard.shipping} dias úteis</p>
+                <button>Falar com o vendedor</button>
+            </CardInfo>
+          </CardContainer>
+      )
+    })
+    return(
+      <div>
+        {renderCarsCards}
+      </div>
+    )
+  }
+}
