@@ -34,14 +34,21 @@ export default class Filter extends React.Component {
             type = "number" 
             value = {this.props.minFilter}
           />
+
         </div>
         <div>
           <LabelContainer>Valor máximo:</LabelContainer>
-          <InputContainer type="number" />
+          <InputContainer 
+          type="number" 
+          value={this.props.maxFilter}
+          onChange={this.props.onChangeMaxFilter}/>
         </div>
         <div>
           <LabelContainer>Buscar produto:</LabelContainer>
-          <InputContainer type="text" />
+          <InputContainer 
+          type="text"
+          value={this.props.searchFilter}
+          onChange={this.props.onChangeSearchFilter} />
         </div>
             <MuiThemeProvider theme = {myTheme}>
               <Button variant = "contained" color = "primary">Limpar Filtros</Button>
