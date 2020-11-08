@@ -2,6 +2,7 @@ import React from "react";
 import { ProductsContainer, ProductsHeader } from "./Styled";
 import ProductCard from "./ProductCard";
 
+
 export default class Product extends React.Component {
   render() {
     return (

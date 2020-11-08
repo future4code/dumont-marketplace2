@@ -70,6 +70,7 @@ export const LabelContainer = styled.label`
 export const InputContainer = styled.input`
   width: 180px;
   height: 18px;
+  margin-bottom: 18px;
 `;
 
 export const SelectFilter = styled.select`

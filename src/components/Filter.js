@@ -1,5 +1,19 @@
 import React from "react";
 import { FilterContainer, InputContainer, LabelContainer, FilterButton, SelectFilter } from "./Styled";
+import Button from '@material-ui/core/Button';
+import {createMuiTheme, MuiThemeProvider} from '@material-ui/core';
+
+const myTheme = createMuiTheme ({
+  pallete: {
+    primary: { 
+      main: "#FF5C5C"
+    },
+    secondary: { 
+      main: "#E0E0E0"
+    }
+  },
+  spacing: 20,
+})
 
 export default class Filter extends React.Component {
   render() {
@@ -19,7 +33,6 @@ export default class Filter extends React.Component {
           <InputContainer 
             type = "number" 
             value = {this.props.minFilter}
-            onchange = {}
           />
         </div>
         <div>
@@ -30,7 +43,9 @@ export default class Filter extends React.Component {
           <LabelContainer>Buscar produto:</LabelContainer>
           <InputContainer type="text" />
         </div>
-        <FilterButton>Limpar Filtros</FilterButton>
+            <MuiThemeProvider theme = {myTheme}>
+              <Button variant = "contained" color = "primary">Limpar Filtros</Button>
+            </MuiThemeProvider>
       </FilterContainer>
     );
   }

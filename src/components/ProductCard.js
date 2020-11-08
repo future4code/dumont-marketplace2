@@ -2,12 +2,26 @@ import React from "react";
 import { CardContainer, CardInfo, CursedDiv, SaleButton} from "./Styled"
 import axios from "axios";
 import styled from 'styled-components'
+import Button from '@material-ui/core/Button';
+import {createMuiTheme, MuiThemeProvider} from '@material-ui/core';
 
 const ImgContainer = styled.img`
   width: 256px;
   height: 144px;
   align-self: center;
 `
+
+const myTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#FF5C5C"
+    },
+    secondary: {
+      main: "#FF00FF"
+    }
+  }
+});
+
 
 export default class ProductsCard extends React.Component {
   state = {
@@ -38,7 +52,9 @@ getAllCars = () => {
                 <p>{carCard.description}</p>
                 <p>{carCard.paymentMethod}</p>
                 <p>{carCard.shipping} dias úteis</p>
-                <SaleButton>Falar com o vendedor</SaleButton>
+                <MuiThemeProvider theme = {myTheme}>
+                  <Button variant = "contained" color = "primary">Falar com o vendedor</Button>
+                </MuiThemeProvider>
             </CardInfo>
           </CardContainer>
       )

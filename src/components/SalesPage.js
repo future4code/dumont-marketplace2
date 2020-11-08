@@ -7,8 +7,6 @@ import {createMuiTheme, MuiThemeProvider} from '@material-ui/core';
 import { DivLogo, ImageLogo, Title, InputSale, ImageCars, ButtonConteiner } from "./styles";
 
 
-
-
 const myTheme = createMuiTheme ({
     pallete: {
       primary: { 
@@ -19,7 +17,7 @@ const myTheme = createMuiTheme ({
       }
     },
     spacing: 20,
-})
+  })
 
 class SalesPage extends React.Component {
     state = {
@@ -143,9 +141,11 @@ class SalesPage extends React.Component {
                 <MuiThemeProvider theme = {myTheme}> 
 
                  <ButtonConteiner>
-                  <Button onClick={this.handleCreateAd} variant = "contained" color = "primary">
-                    ENVIAR
-                  </Button>
+                 <MuiThemeProvider theme = {myTheme}>
+                    <Button onClick={this.handleCreateAd} variant = "contained" color = "primary">
+                        ENVIAR
+                    </Button>
+                  </MuiThemeProvider>
                 </ButtonConteiner>
 
                 </MuiThemeProvider>

@@ -7,7 +7,7 @@ export const DivLogo = styled.div`
    justify-content: flex-start;
    align-items: flex-start;
    margin: 0;
-   padding-bottom: 15%;
+   padding-bottom: 3%;
 `
 
 export const ImageLogo = styled.img`
@@ -35,7 +35,6 @@ export const ImageCars = styled.img`
    width: 58%;
    height: 9%;
    float: right;
-   margin-top: 4%;
 `
 
 export const ButtonConteiner = styled.div`
